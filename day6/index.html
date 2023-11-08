@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset>
+        <legend><h2>Signup form</h2></legend>
+    <!-- forms -->
+    <form method="post" action="./login.html" target="_blank">
+        <label for="fname">First Name</label>
+        <input name="firstname" id="fname" type="text" placeholder="Enter your name"><br><br>
+        <label for="lname">Last Name</label>
+        <input name="lastname" id="lname" type="text" placeholder="Enter your surname"><br><br>
+        <label for="pswd">Password</label>
+        <input name="password" id="pswd" type="text" placeholder="Enter your password"><br><br>
+        <!-- <label for="ph">Mobile Number:</label>
+        <input name="mobile" id="ph" type="number" placeholder="Enter Mobile Number"> -->
+        <label for="phone">Mobilenumber</label>
+        <input name="phone" id="phone" type="tel" pattern="[6-9]{1}[0-9]{9}">
+        <!-- [0-9]{10} -->
+        <a href="tel:+16031112298p000"></a>
+        <br><br>
+        <label for="mail">EMail</label>
+        <input name="email" id="mail" type="email" autofocus>
+        <br><br>
+        <label for="DOB">Dob</label>
+        <input name="dob" id="DOB" type="datetime-local">
+        <BR><BR>
+        <label for="file">Resume</label>
+        <input name="resume" id="file" type="file">
+        <input type="range">
+        <br>
+        <p>Enter Address</p>
+        <textarea name="Address" id="Address" cols="30" rows="15"></textarea>
+        <br><br>
+        <!-- RADIO BOX -->
+        <label for="gender">Gender:</label>
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="Male" value="male">
+        <label for="female">Female</label>
+        <input type="radio" name="gender" id="female" value="female">
+        <label for="others">Others</label>
+        <input type="radio" name="gender" id="other" value="other">
+        <br>
+        <br>
+        <!-- checkbox -->
+        <p>Choose your fav language</p>
+        <label for="html">HTML</label>
+        <input type="checkbox" name="Htmls" id="Html" value="html">
+        <label for="css">CSS</label>
+        <input type="checkbox" name="css" id="Css" value="css">
+        <label for="js">JS</label>
+        <input type="checkbox" name="js" id="Js" value="js" checked>
+        <label for="github">GitHub</label>
+        <input type="checkbox" name="github" id="github" value="github">
+        <label for="sql">SQL</label>
+        <input type="checkbox" name="sql" id="sql" value="sql" checked>
+        <br><br>
+        <!-- option -->
+        <label for="country">Choose Country</label>
+        <select name="country" id="country">
+            <option value="india">India</option>
+            <option value="usa">USA</option>
+            <option value="canada">Canada</option>
+            <option value="uk">Uk</option>
+        </select>
+        <br><br>
+        <input type="search">
+        <br>
+        <br>
+        <input type="submit">
+    </form>
+</fieldset>
+<!--figure & caption -->
+    <figure>
+        <img title="cat" src="../images/cat-img.jpg" alt="cat-img"/>
+        <figcaption>Fig:cat img</figcaption>
+    </figure>
+</body>
+</html>
