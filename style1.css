@@ -1,0 +1,16 @@
+/* external css */
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Collegiate+One&family=Dancing+Script&family=Edu+TAS+Beginner&family=Encode+Sans&family=Fira+Code&family=Fuggles&family=Montserrat&family=Roboto:wght@300;400;700&family=Ubuntu&display=swap');
+p{
+    font-family: 'Fira Code', monospace;
+    background-color: orange;
+}
+pre{
+    font-family: 'Edu TAS Beginner', cursive;
+    font-weight: 600;
+    font-size: medium;
+    text-align: center;
+
+}
+h1{
+    font-family: 'Fuggles', cursive;
+}
