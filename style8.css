@@ -1,0 +1,17 @@
+.th1{
+    background-color: blue;
+}
+#bg1{
+    background-color: black;
+    color: aliceblue;
+}
+*{
+    text-align: center;
+}
+.ul1{
+    background-color: brown;
+}
+#p1,#p2,#p3,#p4{
+    background-color: brown;
+    color: aliceblue;
+}
