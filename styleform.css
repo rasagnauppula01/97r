@@ -1,0 +1,22 @@
+#formbg{
+    background-color: black;
+    color: whitesmoke;
+    text-align: center;
+}
+.sub,.res{
+    color: blue;
+    background-color: pink;
+}
+#gd{
+    color: red;
+}
+*{
+    color: green;
+    text-align: center;
+}
+#name{
+    font-style: italic;
+    text-align: center;
+    font-family: 'Fira Code', monospace;
+    color: green;
+}
