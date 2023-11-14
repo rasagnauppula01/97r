@@ -1,0 +1,45 @@
+.b1,.b2,.b3,.b4,.b5,.b6,.b7,.b8,.b9,.b10,.b11,.b12,.b13,.b14,.b15,.b16,.b17,.b18,.b19,.b20,.b21,.b22,.b23,.b24,.b25{
+    width: 290px;
+    height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(31, 32, 33);
+
+}
+.cd1{
+    width: 1500px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.pd1{
+    background-color: black;
+    padding: 10px 10px 10px 10px;
+}
+.mic{
+    width: 190px;
+    height: 100px;
+    /* padding: 90px 60px 40px 60px; */
+    /* display: inline; */
+            color: rgb(192, 49, 49);
+            padding-top: -10px;
+            font-size: 20px;
+}
+.name{
+    text-align: center;
+    align-items: center;
+    color: white;
+    padding: 50px;
+}
+span{
+    color: antiquewhite;
+    display: inline-block;
+    margin: -5px;
+    font-size: 15px;
+    padding-left: 15px ;
+}
+
+
+
