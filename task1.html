@@ -4,116 +4,838 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        .c1,.c2,.c3{
-            border:0cap;
-            width: 300px;
-            height: 300px;
-            background-color: aliceblue;
-            border-radius: 0%;
-            justify-content: space-around;
-            /* display: flex;
-            justify-content: center;
-            align-items: center;
-             */
-             padding: 50px 20px 10px 20px;
-
-        }
-        img{
-            border: 1px solid black;
-            border-radius: 50%;
-        }
-        .p1{
-            display: flex;
-            gap: 50px;
-            
-
-        }
-        .subp1{
-            /* display: flex;
-            justify-content: center;
-            align-items: center; */
-            text-align: center;
-        }
-        .t1{
-            background-color: aquamarine;
-            display: flex;
-            /* flex-direction:row-reverse, column-reverse; */
-            justify-content: center;
-            align-items: center;
-        }
-        .social-icon-img{
-            display: inline-block;
-            margin: 0px 0px 0px 0px ;
-        }
-    </style>
+    <link rel="stylesheet" href="index1.css">
+    
 </head>
-<body class="t1">
-    <div class="subp1">
-        <h1>TEAM</h1>
-        <img src="data:image/jpeg;base64,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" alt="img">
-        <h2>Together Everyone Achieves More</h2>
-        <div class="p1">
-            <div class="c1">
-                <img src="../images/10000coders-logo-img.webp" alt="img" height="90px" width="90px">
-               <h1> 10000Coders Trainer</h1>
-                    <br><br>
-                    <br><br>
-                    <div class="social-icon-img">
-                        <a href="https://www.linkedin.com/">
-                            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" class="social-icon-img" alt="instagram logo" height="20px" width="20px">
-                        </a>
-                        <a href="https://www.instagram.com">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/600px-Instagram_icon.png" alt="ins" height="20px" width="20px">
-                        </a>
-                        <a href="https://www.facebook.com">
-                            <img src="https://www.facebook.com/images/fb_icon_325x325.png" alt="fb" height="20px" width="20px">
-                        </a>
+<body>
+    <div class="border">
+        <div><h1 class="heading">2024 Calendar</h1></div>
+        <div id="shadow">
+            <!-- <div></div> -->
+            <div class="subpd">
+                <!-- <div id="month">JANUARY</div> -->
+                <div class="item1">
+                    <div id="month">JANUARY</div>
+                    <div class="pd">      
+                        <!-- flex is applied to parent  -->
+                       <div class="cd">M</div>
+                       <div class="cd">T</div>
+                       <div class="cd">W</div>
+                       <div class="cd">T</div>
+                        <div class="cd">F</div>
+                        <div class="cd">S</div>
+                        <div class="cd">S</div>
+                   </div>
+                   <div>
+                        <div class="cd">01</div>
+                       <div class="cd">08</div>
+                       <div class="cd">15</div>
+                       <div class="cd">22</div>
+                        <div class="cd">29</div>
+                   </div>
+                   
+                   <div id="sep">
+                        <div class="cd">02</div>
+                        <div class="cd">09</div>
+                        <div class="cd">16</div>
+                        <div class="cd">23</div>
+                        <div class="cd">30</div>
                     </div>
+
+                    <div id="sep">
+                        <div class="cd">03</div>
+                        <div class="cd">10</div>
+                        <div class="cd">17</div>
+                        <div class="cd">24</div>
+                        <div class="cd">31</div>
+                    </div>
+
+                    <div id="sep">
+                        <div class="cd">04</div>
+                        <div class="cd">11</div>
+                        <div class="cd">18</div>
+                        <div class="cd">25</div>
+                    </div>
+
+                    <div id="sep">
+                        <div class="cd">05</div>
+                        <div class="cd">12</div>
+                        <div class="cd">19</div>
+                        <div class="cd">27</div>
+                    </div>
+
+                    <div id="sep">
+                        <div class="cd">05</div>
+                        <div class="cd">12</div>
+                        <div class="cd">19</div>
+                        <div class="cd">27</div>
+                    </div>
+
+                    <div id="sep" style="color: red;">
+                        <div class="cd">07</div>
+                        <div class="cd">14</div>
+                        <div class="cd">21</div>
+                        <div class="cd">28</div>
+                    </div>
+                </div>
+                
+                <!-- <div id="month">FEBRUARY</div> -->
+                <div class="item2">
+                    <div id="month">FEBRUARY</div>
+                    <div class="pd">      
+                       <div class="cd">M</div>
+                       <div class="cd">T</div>
+                       <div class="cd">W</div>
+                       <div class="cd">T</div>
+                        <div class="cd">F</div>
+                        <div class="cd">S</div>
+                        <div class="cd">S</div>
+                   </div>
+                   <div>
+                        <div class="cd">x</div>
+                       <div class="cd">05</div>
+                       <div class="cd">12</div>
+                       <div class="cd">19</div>
+                        <div class="cd">26</div>
+                   </div>
+                   
+                   <div id="sep">
+                        <div class="cd">x</div>
+                        <div class="cd">06</div>
+                        <div class="cd">13</div>
+                        <div class="cd">20</div>
+                        <div class="cd">27</div>
+                    </div>
+
+                    <div id="sep">
+                        <div class="cd">x</div>
+                        <div class="cd">07</div>
+                        <div class="cd">14</div>
+                        <div class="cd">21</div>
+                        <div class="cd">28</div>
+                    </div>
+
+                    <div id="sep">
+                        <div class="cd">01</div>
+                        <div class="cd">08</div>
+                        <div class="cd">15</div>
+                        <div class="cd">22</div>
+                        <div class="cd">29</div>
+                    </div>
+
+                    <div id="sep">
+                        <div class="cd">02</div>
+                        <div class="cd">09</div>
+                        <div class="cd">16</div>
+                        <div class="cd">23</div>
+                    </div>
+
+                    <div id="sep">
+                        <div class="cd">03</div>
+                        <div class="cd">10</div>
+                        <div class="cd">17</div>
+                        <div class="cd">24</div>
+                        <div class="cd"></div>
+                    </div>
+
+                    <div id="sep" style="color: red;">
+                        <div class="cd">04</div>
+                        <div class="cd">11</div>
+                        <div class="cd">18</div>
+                        <div class="cd">25</div>
+                    </div>
+                </div>
+                <!-- <div id="month">MARCH</div> -->
+                <div class="item3">
+                    <div id="month">MARCH</div>
+                    <div class="pd">      
+                        <div class="cd">M</div>
+                        <div class="cd">T</div>
+                        <div class="cd">W</div>
+                        <div class="cd">T</div>
+                         <div class="cd">F</div>
+                         <div class="cd">S</div>
+                         <div class="cd">S</div>
+                    </div>
+                    <div>
+                         <div class="cd">x</div>
+                        <div class="cd">04</div>
+                        <div class="cd">11</div>
+                        <div class="cd">18</div>
+                         <div class="cd">25</div>
+                    </div>
+                    
+                    <div id="sep">
+                         <div class="cd">x</div>
+                         <div class="cd">05</div>
+                         <div class="cd">12</div>
+                         <div class="cd">19</div>
+                         <div class="cd">26</div>
+                     </div>
+ 
+                     <div id="sep">
+                         <div class="cd">x</div>
+                         <div class="cd">06</div>
+                         <div class="cd">13</div>
+                         <div class="cd">20</div>
+                         <div class="cd">27</div>
+                     </div>
+ 
+                     <div id="sep">
+                         <div class="cd">x</div>
+                         <div class="cd">07</div>
+                         <div class="cd">14</div>
+                         <div class="cd">21</div>
+                         <div class="cd">28</div>
+                     </div>
+ 
+                     <div id="sep">
+                         <div class="cd">01</div>
+                         <div class="cd">08</div>
+                         <div class="cd">15</div>
+                         <div class="cd">22</div>
+                         <div class="cd">29</div>
+                     </div>
+
+                     <div id="sep">
+                        <div class="cd">02</div>
+                        <div class="cd">09</div>
+                        <div class="cd">16</div>
+                        <div class="cd">23</div>
+                        <div class="cd">30</div>
+                    </div>
+ 
+                     <div id="sep" style="color: red;">
+                         <div class="cd">03</div>
+                         <div class="cd">10</div>
+                         <div class="cd">17</div>
+                         <div class="cd">24</div>
+                         <div class="cd">31</div>
+                     </div>
+                </div>
             </div>
 
-            <div class="c2">
-                <img src="../images/images/bog-baby-animals-img.jpg" alt="bog" height="90px" width="90px">
-                <h1>Rasagna Uppula</h1>
-                <br><br>
-                    <br><br>
-                    <div class="social-icon-img">
-                        <a href="https://www.linkedin.com/">
-                            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" class="social-icon-img" alt="instagram logo" height="20px" width="20px">
-                        </a>
-                        <a href="https://www.instagram.com">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/600px-Instagram_icon.png" alt="ins" height="20px" width="20px">
-                        </a>
-                        <a href="https://www.facebook.com">
-                            <img src="https://www.facebook.com/images/fb_icon_325x325.png" alt="fb" height="20px" width="20px">
-                        </a>
+            <div class="subpd2">
+                <!-- <div id="month2">APRIL</div> -->
+                <div class="item2">
+                    <div id="month2">APRIL</div>
+                    <div class="pd">      
+                        <!-- flex is applied to parent  -->
+                       <div class="cd">M</div>
+                       <div class="cd">T</div>
+                       <div class="cd">W</div>
+                       <div class="cd">T</div>
+                        <div class="cd">F</div>
+                        <div class="cd">S</div>
+                        <div class="cd">S</div>
+                   </div>
+                   <div>
+                        <div class="cd">01</div>
+                       <div class="cd">08</div>
+                       <div class="cd">15</div>
+                       <div class="cd">22</div>
+                        <div class="cd">29</div>
+                   </div>
+                   
+                   <div id="sep">
+                        <div class="cd">02</div>
+                        <div class="cd">09</div>
+                        <div class="cd">16</div>
+                        <div class="cd">23</div>
+                        <div class="cd">30</div>
                     </div>
+
+                    <div id="sep">
+                        <div class="cd">03</div>
+                        <div class="cd">10</div>
+                        <div class="cd">17</div>
+                        <div class="cd">24</div>
+                        <div class="cd"></div>
+                    </div>
+
+                    <div id="sep">
+                        <div class="cd">04</div>
+                        <div class="cd">11</div>
+                        <div class="cd">18</div>
+                        <div class="cd">25</div>
+                    </div>
+
+                    <div id="sep">
+                        <div class="cd">05</div>
+                        <div class="cd">12</div>
+                        <div class="cd">19</div>
+                        <div class="cd">26</div>
+                    </div>
+
+                    <div id="sep">
+                        <div class="cd">06</div>
+                        <div class="cd">13</div>
+                        <div class="cd">20</div>
+                        <div class="cd">27</div>
+                        <div class="cd"></div>
+                    </div>
+
+                    <div id="sep" style="color: red;">
+                        <div class="cd">07</div>
+                        <div class="cd">14</div>
+                        <div class="cd">21</div>
+                        <div class="cd">28</div>
+                    </div>
+                </div>
+                <!-- <div id="month2">MAY</div> -->
+                <div class="item2">
+                    <div id="month2">MAY</div>
+                    <div class="pd">      
+                       <div class="cd">M</div>
+                       <div class="cd">T</div>
+                       <div class="cd">W</div>
+                       <div class="cd">T</div>
+                        <div class="cd">F</div>
+                        <div class="cd">S</div>
+                        <div class="cd">S</div>
+                   </div>
+                   <div>
+                        <div class="cd">x</div>
+                       <div class="cd">06</div>
+                       <div class="cd">13</div>
+                       <div class="cd">20</div>
+                        <div class="cd">27</div>
+                   </div>
+                   
+                   <div id="sep">
+                        <div class="cd">x</div>
+                        <div class="cd">07</div>
+                        <div class="cd">14</div>
+                        <div class="cd">21</div>
+                        <div class="cd">28</div>
+                    </div>
+
+                    <div id="sep">
+                        <div class="cd">01</div>
+                        <div class="cd">08</div>
+                        <div class="cd">15</div>
+                        <div class="cd">22</div>
+                        <div class="cd">29</div>
+                    </div>
+
+                    <div id="sep">
+                        <div class="cd">02</div>
+                        <div class="cd">09</div>
+                        <div class="cd">16</div>
+                        <div class="cd">23</div>
+                        <div class="cd">30</div>
+                    </div>
+
+                    <div id="sep">
+                        <div class="cd">03</div>
+                        <div class="cd">10</div>
+                        <div class="cd">17</div>
+                        <div class="cd">24</div>
+                        <div class="cd">31</div>
+                    </div>
+
+                    <div id="sep">
+                        <div class="cd">04</div>
+                        <div class="cd">11</div>
+                        <div class="cd">18</div>
+                        <div class="cd">25</div>
+                        <div class="cd">x</div>
+                    </div>
+
+                    <div id="sep" style="color: red;">
+                        <div class="cd">05</div>
+                        <div class="cd">12</div>
+                        <div class="cd">19</div>
+                        <div class="cd">26</div>
+                    </div>
+                </div>
+                <!-- <div id="month2">JUNE</div> -->
+                <div class="item3">
+                    <div id="month2">JUNE</div>
+                    <div class="pd">      
+                        <div class="cd">M</div>
+                        <div class="cd">T</div>
+                        <div class="cd">W</div>
+                        <div class="cd">T</div>
+                        <div class="cd">F</div>
+                        <div class="cd">S</div>
+                        <div class="cd">S</div>
+                    </div>
+                    <div>
+                        <div class="cd">x</div>
+                        <div class="cd">03</div>
+                        <div class="cd">10</div>
+                        <div class="cd">17</div>
+                        <div class="cd">24</div>
+                    </div>
+                    
+                    <div id="sep">
+                         <div class="cd">x</div>
+                         <div class="cd">04</div>
+                         <div class="cd">11</div>
+                         <div class="cd">18</div>
+                         <div class="cd">25</div>
+                     </div>
+ 
+                     <div id="sep">
+                         <div class="cd">x</div>
+                         <div class="cd">05</div>
+                         <div class="cd">12</div>
+                         <div class="cd">19</div>
+                         <div class="cd">26</div>
+                     </div>
+ 
+                     <div id="sep">
+                        <div class="cd">x</div>
+                         <div class="cd">06</div>
+                         <div class="cd">13</div>
+                         <div class="cd">20</div>
+                         <div class="cd">27</div>
+                     </div>
+
+                     <div id="sep">
+                        <div class="cd">x</div>
+                        <div class="cd">07</div>
+                        <div class="cd">14</div>
+                        <div class="cd">21</div>
+                        <div class="cd">28</div>
+                    </div>
+ 
+                     <div id="sep">
+                         <div class="cd">01</div>
+                         <div class="cd">08</div>
+                         <div class="cd">15</div>
+                         <div class="cd">22</div>
+                         <div class="cd">29</div>
+                     </div>
+ 
+                     <div id="sep" style="color: red;">
+                         <div class="cd">02</div>
+                         <div class="cd">09</div>
+                         <div class="cd">16</div>
+                         <div class="cd">23</div>
+                         <div class="cd">30</div>
+                     </div>
+                </div>
             </div>
 
 
-            <div class="c3">
-                <img src="../images/lion-img.avif" alt="lion" height="90px" width="90px">
-                <h2>Support trainers&Placement Team</h2>
-                <br><br>
-                    <br><br>
-                    <div class="social-icon-img">
-                        <a href="https://www.linkedin.com/">
-                            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" class="social-icon-img" alt="instagram logo" height="20px" width="20px">
-                        </a>
-                        <a href="https://www.instagram.com">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/600px-Instagram_icon.png" alt="ins" height="20px" width="20px">
-                        </a>
-                        <a href="https://www.facebook.com">
-                            <img src="https://www.facebook.com/images/fb_icon_325x325.png" alt="fb" height="20px" width="20px">
-                        </a>
+            <div class="subpd2">
+                <!-- <div id="month2">APRIL</div> -->
+                <div class="item2">
+                    <div id="month2">JULY</div>
+                    <div class="pd">      
+                        <!-- flex is applied to parent  -->
+                       <div class="cd">M</div>
+                       <div class="cd">T</div>
+                       <div class="cd">W</div>
+                       <div class="cd">T</div>
+                        <div class="cd">F</div>
+                        <div class="cd">S</div>
+                        <div class="cd">S</div>
+                   </div>
+                   <div>
+                        <div class="cd">01</div>
+                       <div class="cd">08</div>
+                       <div class="cd">15</div>
+                       <div class="cd">22</div>
+                        <div class="cd">29</div>
+                   </div>
+                   
+                   <div id="sep">
+                        <div class="cd">02</div>
+                        <div class="cd">09</div>
+                        <div class="cd">16</div>
+                        <div class="cd">23</div>
+                        <div class="cd">30</div>
                     </div>
+
+                    <div id="sep">
+                        <div class="cd">03</div>
+                        <div class="cd">10</div>
+                        <div class="cd">17</div>
+                        <div class="cd">24</div>
+                        <div class="cd">31</div>
+                    </div>
+
+                    <div id="sep">
+                        <div class="cd">04</div>
+                        <div class="cd">11</div>
+                        <div class="cd">18</div>
+                        <div class="cd">25</div>
+                    </div>
+
+                    <div id="sep">
+                        <div class="cd">05</div>
+                        <div class="cd">12</div>
+                        <div class="cd">19</div>
+                        <div class="cd">27</div>
+                    </div>
+
+                    <div id="sep">
+                        <div class="cd">06</div>
+                        <div class="cd">13</div>
+                        <div class="cd">20</div>
+                        <div class="cd">27</div>
+                        <div class="cd"></div>
+                    </div>
+
+                    <div id="sep" style="color: red;">
+                        <div class="cd">07</div>
+                        <div class="cd">14</div>
+                        <div class="cd">21</div>
+                        <div class="cd">28</div>
+                    </div>
+                </div>
+                <!-- <div id="month2">MAY</div> -->
+                <div class="item2">
+                    <div id="month2">AUGUST</div>
+                    <div class="pd">      
+                       <div class="cd">M</div>
+                       <div class="cd">T</div>
+                       <div class="cd">W</div>
+                       <div class="cd">T</div>
+                        <div class="cd">F</div>
+                        <div class="cd">S</div>
+                        <div class="cd">S</div>
+                   </div>
+                   <div>
+                    <div class="cd">x</div>
+                    <div class="cd">05</div>
+                    <div class="cd">12</div>
+                    <div class="cd">19</div>
+                    <div class="cd">26</div>
+                   </div>
+                   
+                   <div id="sep">
+                        <div class="cd">x</div>
+                        <div class="cd">06</div>
+                        <div class="cd">13</div>
+                        <div class="cd">20</div>
+                        <div class="cd">27</div>
+                    </div>
+
+                    <div id="sep">
+                        <div class="cd">x</div>
+                        <div class="cd">07</div>
+                        <div class="cd">14</div>
+                        <div class="cd">21</div>
+                        <div class="cd">28</div>
+                    </div>
+
+                    <div id="sep">
+                        <div class="cd">01</div>
+                       <div class="cd">08</div>
+                       <div class="cd">15</div>
+                       <div class="cd">22</div>
+                        <div class="cd">29</div>
+                    </div>
+
+                    <div id="sep">
+                        <div class="cd">02</div>
+                        <div class="cd">09</div>
+                        <div class="cd">16</div>
+                        <div class="cd">23</div>
+                        <div class="cd">30</div>
+                    </div>
+
+                    <div id="sep">
+                        <div class="cd">03</div>
+                        <div class="cd">10</div>
+                        <div class="cd">17</div>
+                        <div class="cd">24</div>
+                        <div class="cd">31</div>
+                    </div>
+
+                    <div id="sep" style="color: red;">
+                        <div class="cd">04</div>
+                        <div class="cd">11</div>
+                        <div class="cd">18</div>
+                        <div class="cd">25</div>
+                    </div>
+                </div>
+                <!-- <div id="month2">JUNE</div> -->
+                <div class="item3">
+                    <div id="month2">SEPTEMBER</div>
+                    <div class="pd">      
+                        <div class="cd">M</div>
+                        <div class="cd">T</div>
+                        <div class="cd">W</div>
+                        <div class="cd">T</div>
+                        <div class="cd">F</div>
+                        <div class="cd">S</div>
+                        <div class="cd">S</div>
+                    </div>
+                    <div>
+                        <div class="cd">x</div>
+                        <div class="cd">02</div>
+                        <div class="cd">09</div>
+                        <div class="cd">16</div>
+                        <div class="cd">23</div>
+                        <div class="cd">30</div>
+                    </div>
+                    
+                    <div id="sep">
+                        <div class="cd">x</div>
+                        <div class="cd">03</div>
+                        <div class="cd">10</div>
+                        <div class="cd">17</div>
+                        <div class="cd">24</div>
+                        <div class="cd"></div>
+                     </div>
+ 
+                     <div id="sep">
+                        <div class="cd">x</div>
+                        <div class="cd">04</div>
+                        <div class="cd">11</div>
+                        <div class="cd">18</div>
+                        <div class="cd">25</div>
+                     </div>
+ 
+                     <div id="sep">
+                        <div class="cd">x</div>
+                        <div class="cd">05</div>
+                        <div class="cd">12</div>
+                        <div class="cd">19</div>
+                        <div class="cd">27</div>
+                     </div>
+ 
+                     <div id="sep">
+                        <div class="cd">x</div>
+                         <div class="cd">06</div>
+                         <div class="cd">13</div>
+                         <div class="cd">20</div>
+                         <div class="cd">27</div>
+                     </div>
+
+                     <div id="sep">
+                        
+                        <div class="cd">x</div>
+                        <div class="cd">07</div>
+                         <div class="cd">14</div>
+                         <div class="cd">21</div>
+                         <div class="cd">28</div>
+                    </div>
+ 
+                     <div id="sep" style="color: red;">
+                        <div class="cd">01</div>
+                        <div class="cd">08</div>
+                        <div class="cd">15</div>
+                        <div class="cd">22</div>
+                        <div class="cd">29</div>
+                     </div>
+                </div>
             </div>
 
+            <div class="subpd2">
+                <!-- <div id="month2">APRIL</div> -->
+                <div class="item2">
+                    <div id="month2">OCTOBER</div>
+                    <div class="pd">      
+                        <!-- flex is applied to parent  -->
+                       <div class="cd">M</div>
+                       <div class="cd">T</div>
+                       <div class="cd">W</div>
+                       <div class="cd">T</div>
+                        <div class="cd">F</div>
+                        <div class="cd">S</div>
+                        <div class="cd">S</div>
+                   </div>
+                   <div>
+                        <div class="cd">x</div>
+                       <div class="cd">07</div>
+                       <div class="cd">14</div>
+                       <div class="cd">21</div>
+                        <div class="cd">28</div>
+                   </div>
+                   
+                   <div id="sep">
+                    <div class="cd">01</div>
+                    <div class="cd">08</div>
+                    <div class="cd">15</div>
+                    <div class="cd">22</div>
+                     <div class="cd">29</div>
+                    </div>
 
-           <!-- <div>
-            <a href="https://linkdin.com"></a>
-           </div> -->
-           
+                    <div id="sep">
+                        <div class="cd">02</div>
+                        <div class="cd">09</div>
+                        <div class="cd">16</div>
+                        <div class="cd">23</div>
+                        <div class="cd">30</div>
+                    </div>
+
+                    <div id="sep">
+                        <div class="cd">03</div>
+                        <div class="cd">10</div>
+                        <div class="cd">17</div>
+                        <div class="cd">24</div>
+                        <div class="cd">31</div>
+                    </div>
+
+                    <div id="sep">
+                        <div class="cd">04</div>
+                        <div class="cd">11</div>
+                        <div class="cd">18</div>
+                        <div class="cd">25</div>
+                    </div>
+
+                    <div id="sep">
+                        <div class="cd">05</div>
+                        <div class="cd">12</div>
+                        <div class="cd">19</div>
+                        <div class="cd">26</div>
+                    </div>
+
+                    <div id="sep" style="color: red;">
+                        <div class="cd">06</div>
+                        <div class="cd">13</div>
+                        <div class="cd">20</div>
+                        <div class="cd">27</div>
+                    </div>
+                </div>
+                <!-- <div id="month2">MAY</div> -->
+                <div class="item2">
+                    <div id="month2">NOVEMBER</div>
+                    <div class="pd">      
+                       <div class="cd">M</div>
+                       <div class="cd">T</div>
+                       <div class="cd">W</div>
+                       <div class="cd">T</div>
+                        <div class="cd">F</div>
+                        <div class="cd">S</div>
+                        <div class="cd">S</div>
+                   </div>
+                   <div>
+                        
+                        <div class="cd">x</div> 
+                        <div class="cd">04</div>
+                        <div class="cd">11</div>
+                        <div class="cd">18</div>
+                        <div class="cd">25</div>
+                   </div>
+                   
+                   <div id="sep">
+                    <div class="cd">x</div> 
+                    <div class="cd">05</div>
+                        <div class="cd">12</div>
+                        <div class="cd">19</div>
+                        <div class="cd">26</div>
+                        
+                    </div>
+
+                    <div id="sep">
+                        <div class="cd">x</div>
+                        <div class="cd">06</div>
+                        <div class="cd">13</div>
+                        <div class="cd">20</div>
+                        <div class="cd">27</div>
+                    </div>
+
+                    <div id="sep">
+                        <div class="cd">x</div> 
+                        <div class="cd">07</div>
+                        <div class="cd">14</div>
+                        <div class="cd">21</div>
+                        <div class="cd">28</div>
+                    </div>
+
+                    <div id="sep">
+                        <div class="cd">01</div>
+                       <div class="cd">08</div>
+                       <div class="cd">15</div>
+                       <div class="cd">22</div>
+                        <div class="cd">29</div>
+                    </div>
+
+                    <div id="sep">
+                        <div class="cd">02</div>
+                        <div class="cd">09</div>
+                        <div class="cd">16</div>
+                        <div class="cd">23</div>
+                        <div class="cd">30</div>
+                    </div>
+
+                    <div id="sep" style="color: red;">
+                        
+                        <div class="cd">03</div>
+                        <div class="cd">10</div>
+                        <div class="cd">17</div>
+                        <div class="cd">24</div>
+                    </div>
+                </div>
+                <!-- <div id="month2">JUNE</div> -->
+                <div class="item3">
+                    <div id="month2">DECEMBER</div>
+                    <div class="pd">      
+                        <div class="cd">M</div>
+                        <div class="cd">T</div>
+                        <div class="cd">W</div>
+                        <div class="cd">T</div>
+                        <div class="cd">F</div>
+                        <div class="cd">S</div>
+                        <div class="cd">S</div>
+                    </div>
+                    <div>
+                        <div class="cd">x</div>
+                        <div class="cd">02</div>
+                         <div class="cd">09</div>
+                         <div class="cd">16</div>
+                         <div class="cd">23</div>
+                         <div class="cd">30</div>
+                    </div>
+                    
+                    <div id="sep">
+                        <div class="cd">x</div>
+                        <div class="cd">03</div>
+                        <div class="cd">10</div>
+                        <div class="cd">17</div>
+                        <div class="cd">24</div>
+                        <div class="cd">31</div>
+                     </div>
+ 
+                     <div id="sep">
+                        <div class="cd">x</div>
+                        <div class="cd">04</div>
+                        <div class="cd">11</div>
+                        <div class="cd">18</div>
+                        <div class="cd">25</div>
+                     </div>
+ 
+                     <div id="sep">
+                        <div class="cd">x</div>
+                        <div class="cd">05</div>
+                         <div class="cd">12</div>
+                         <div class="cd">19</div>
+                         <div class="cd">26</div>
+                     </div>
+ 
+                     <div id="sep">
+                        <div class="cd">x</div>
+                         <div class="cd">06</div>
+                         <div class="cd">13</div>
+                         <div class="cd">20</div>
+                         <div class="cd">27</div>
+                     </div>
+
+                     <div id="sep">
+                        <div class="cd">x</div>
+                        <div class="cd">07</div>
+                        <div class="cd">14</div>
+                        <div class="cd">21</div>
+                        <div class="cd">28</div>
+                        
+                    </div>
+ 
+                     <div id="sep" style="color: red;">
+                         <div class="cd">01</div>
+                        <div class="cd">08</div>
+                        <div class="cd">15</div>
+                        <div class="cd">22</div>
+                        <div class="cd">29</div>
+                     </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>
