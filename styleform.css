@@ -1,0 +1,99 @@
+#formbg{
+    background-color: black;
+    color: whitesmoke;
+    text-align: center;
+}
+.sub,.res{
+    color: white;
+    background-color: green;
+}
+#gd{
+    color: green;
+}
+*{
+    color: green;
+    text-align: center;
+}
+#name{
+    font-style: italic;
+    text-align: center;
+    font-family: 'Fira Code', monospace;
+    color: green;
+}
+#thick{
+    border: 5px solid green;
+    border-radius: 5%;
+}
+
+/* CSS [attribute="value"] Selector */
+input[type="text"]{
+    background-color: lightgreen;
+    border: 5px solid transparent;
+    border-radius: 10px;
+    padding: 20px 90px 2px 2px;
+    width: 150px;
+    height: 10px;
+    box-shadow: 10px 10px black;
+}
+img:hover{
+    border: 4px solid green;
+    height: 90px;
+    width: 90px;
+    /* size: 90px; */
+}
+h1:hover{
+    border: 4px solid green;
+    font-size: 20px;
+}
+input[type="tel"]{
+    background-color: lightgreen;
+    border: 5px solid transparent;
+    border-radius: 10px;
+    padding: 20px 90px 2px 2px;
+    width: 115px;
+    height: 10px;
+    box-shadow: 10px 10px black;
+}
+input[type="email"]{
+    background-color: lightgreen;
+    border: 5px solid transparent;
+    border-radius: 10px;
+    padding: 20px 90px 2px 12px;
+    width: 150px;
+    height: 10px;
+    box-shadow: 10px 10px black;
+} 
+input[id="DOB"]{
+    background-color: lightgreen;
+    border: 5px solid transparent;
+    border-radius: 10px;
+    padding: 20px 90px 2px 2px;
+    width: 180px;
+    height: 10px;
+    box-shadow: 10px 10px black; 
+}
+input[type="submit"]{
+    background-color: lightgreen;
+    /* border: 10px solid green; */
+    /* border-radius: 10px;
+    padding: 20px 90px 2px 2px;
+    width: 180px;
+    height: 10px;
+    box-shadow: 10px 10px black; */
+}
+input:hover{
+    border: 10px solid green;
+    /* background-color: aquamarine; */
+}
+
+
+/* Definition and Usage
+The accent-color property specifies the accent color for user-interface controls like: 
+<input type="checkbox">, <input type="radio">, <input type="range"> and <progress>. */
+
+input[type=checkbox] {
+    accent-color: green;
+  }
+  input[type=radio] {
+    accent-color: red;
+  }
