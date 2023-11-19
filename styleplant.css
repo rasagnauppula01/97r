@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Collegiate+One&family=Dancing+Script:wght@400;500&family=Edu+TAS+Beginner&family=Encode+Sans&family=Fira+Code&family=Fuggles&family=Montserrat&family=Roboto:ital,wght@0,300;0,400;0,700;1,400&family=Ubuntu&display=swap');
+*{
+    font-family: inherit;
+}
+.h1{
+    color: green;
+    text-align: center;
+}
+#Heading,#lg{
+    color: green;
+}
+.me{
+    text-align: center;
+    font-family: font-family: 'Dancing Script', cursive;
+    font-style: italic;
+    color: green;
+}
+#name{
+    font-style: italic;
+    text-align: center;
+    font-family: 'Fira Code', monospace;
+    color: green;
+    font-size:medium;
+}
+#li{
+    color: green;
+}
+
+
+.main {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    background-color: lightgreen;
+    text-emphasis-color: black;
+    position: fixed;
+    display: block;
+    top: 0;
+    width: 100%;
+
+ } 
+ .sub-main {
+    float: left;
+    
+  }
+  .sub-main .anchortag {
+    display: block;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    
+    padding: 10px 9px 0px 9px;
+    text-decoration: none;
+  }
+  .sub-main .anchortag:hover {
+    background-color: black;
+    /* padding: 10px 9px 0px 9px; */
+  }
+  .sub-main .anchortag {
+    display: block;
+    padding: 10px;
+    margin: 0px 160px 0px 50px;
+  }
+
+  div.fix{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    border: 20px solid green;
+    height: 30px;
+    width: 350px;
+    font-size: 30px;
+  }
+
+  .hide{
+    display: none;
+    font-size: 15px;
+    color: aliceblue;
+  }
+  .DIV:hover ~ .hide {
+    display: block;
+  }
+
+  .i{
+  color: green;
+  }
