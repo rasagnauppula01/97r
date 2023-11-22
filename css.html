@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media queries</title>
+    <style>
+        /* @media screen and (min-width:425px) and (max-width:768px){
+            h1{
+                color:blue;
+                display: none;
+            }
+        } */
+
+        /* @media screen and (min-width : 0px) and (max-width : 424px){
+            h1{
+                color: black;
+                display: none;
+            }
+            .menu{
+                display: flex;
+                flex-direction: column;
+                background-color: aquamarine;
+                justify-content: center;
+                gap: 10px;
+                align-items: justify;
+            }
+            img{
+                display: none;
+            }
+        }
+
+        @media screen and (min-width : 769px){
+            h1{
+                display: none;
+            }
+            .menu{
+                display:flex;
+                gap:30px;
+                justify-content: space-between;
+                background-color: brown;
+                color: whitesmoke;
+                padding: 30px;
+            }
+        } */
+
+        @media screen and (min-width:768px){
+            .fb{
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: wrap;
+                gap:60px;
+                justify-content: center;
+                align-items: center;
+                background-color: lightsalmon;
+                border: 5px solid black;
+            }
+            img{
+                width: 220px;
+                height: 300px;
+            }
+        }
+        @media screen and (min-width:425px) and (max-width:767px){
+            img{
+                width: 80%;
+            }
+            .fb{
+                background-color: lightgreen;
+            }
+        }
+        img{
+            opacity: 1;
+        }
+        img:hover{
+            opacity: 0.2;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- <h1>hello</h1>
+    <h2>welcome</h2> -->
+
+    <!-- <h1>I am in between 425px and 768</h1>
+
+    <div>
+        <ul class="menu" type="none">
+            <li>HOME</li>
+           <li>CONTACT</li>
+           <li>SErvices</li>
+           <li>login</li>
+           <li>signup</li>
+        </ul>
+        <img src="../images/login-success-img.png" alt="">
+    </div> -->
+
+    <div style="text-align: center;" class="fb">
+    <img src="../Gallery/Elon Musk.jpg" alt="" height="200px" width="300px">
+    <img src="../Gallery/sundar-pichai.jpg" alt="" height="200px" width="300px">
+    <img src="../Gallery/ratan-tata.webp" alt="" height="200px" width="300px">
+    <img src="../Gallery/Microsoft-CEO-Satya-Nadella.jpeg" alt="" height="200px" width="300px">
+    <img src="../images/Krishna-image.jpg" alt="">
+    <img src="../Gallery/instagram.webp" alt="" height="200px" width="300px">
+    <img src="../Gallery/my-family-album-l.jpg" alt="" height="200px" width="300px">
+    <img src="../Gallery/cemera-img.webp" alt="" height="200px" width="300px">
+    <img src="../Gallery/downloading.webp" alt="" height="200px" width="300px">
+    <img src="../Gallery/video-img.jpg" alt="" height="200px" width="300px">
+    
+    </div>
+</body>
+</html>
