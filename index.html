@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Applying below queries when Mobile-M size is applied */
+        @media screen and (min-width: 375px) and (max-width: 424px){
+            .div1{
+                height: 350px;
+                width: 500px;
+                gap: 20px;
+                border: 2px solid black;
+                padding: 10px;
+                margin: 10px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                background-color: lightgreen;
+                /* border-radius: 15%; */
+                
+            }
+            .div2{
+                height: 450px;
+                width: 520px;
+                gap: 15px;
+                border: 4px solid black;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                background-color: pink;
+            }
+            h1{
+                color: black; 
+            }
+        }
+
+        @media screen and (min-width : 0px) and (max-width : 374px){
+           h1{
+            display: none;
+           }
+
+        }
+        @media screen and (min-width : 425px) and (max-width : 1440px){
+           h1{
+            display: none;
+           } 
+        }
+        
+/* mobile-l */
+        @media screen and (min-width: 425px) and (max-width: 767px) {
+            .div1{
+            border: 2px solid black;
+            background-color: blue;
+            padding: 10px;
+            /* border-radius: 15%; */
+           } 
+            
+        }
+        @media screen and (min-width : 0px) and (max-width : 424px){
+           h2{
+            display: none;
+            background-color: none;
+           }
+
+        }
+        @media screen and (min-width : 767px) and (max-width : 1440px){
+           h2{
+            display: none;
+            background-color: none;
+           }
+        }
+        /* tab */
+        @media screen and (min-width: 768px) and (max-width: 1023px){
+            .div1{
+                height: 350px;
+                width: 500px;
+                gap: 20px;
+                border: 2px solid black;
+                padding: 10px;
+                margin: 10px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                background-color: lightgreen;
+                border-radius: 15%;
+                box-shadow: 15px 15px orangered;
+                
+            }
+            .div2{
+                height: 470px;
+                width: 530px;
+                gap: 15px;
+                border: 4px solid black;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                background-color: pink;
+                border-radius: 10%;
+                box-shadow: 20px 20px lightblue;
+            }
+            h3{
+                color: black; 
+            }
+        }
+        @media screen and (min-width : 0px) and (max-width : 767px){
+           h3{
+            display: none;
+           }
+
+        }
+        @media screen and (min-width : 1024px) and (max-width : 1440px){
+           h3{
+            display: none;
+           } 
+        }
+
+/* laptop */
+        
+
+
+    </style>
+</head>
+<body>
+    <h1>Mobile-M View</h1>
+    <h2>Mobile-L View</h2>
+    <h3>Tab view</h3>
+    <div class="div1">
+        <img src="../Gallery/ratan-tata.webp" alt="" height="150" width="190">
+        <img src="../Gallery/sundar-pichai.jpg" alt="" height="150" width="190">
+        <img src="../Gallery/Microsoft-CEO-Satya-Nadella.jpeg" alt="" height="150" width="190">
+        <img src="../Gallery/Elon Musk.jpg" alt=""height="150" width="190">
+    </div>
+
+    <div class="div2">
+        <img src="../Gallery/tata-quotes1.avif" alt="" height="200" width="250">
+        <img src="../Gallery/tata-quote2.jpg" alt="" height="200" width="250">
+        <img src="../Gallery/ratan-tata3.png" alt="" height="200" width="250">
+        <img src="../Gallery/Best-Ratan-Tata-Quotes.jpg" alt="" height="200" width="250">
+    </div>
+
+</body>
+</html>
