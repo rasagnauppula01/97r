@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       /* unvisited link */
+       a:link{
+        color: darkorange;
+       }
+       /* visited link */
+       a:visited{
+        color: green;
+       }
+       a:hover{
+        color: black;
+        background-color: aqua;
+       }
+       a:active{
+        color: deeppink;
+        background-color: chartreuse;
+       }
+
+
+
+        /* variables in css */
+        :root{
+
+            --primary:red;
+            --secondary:black;
+        }
+        h1{
+            color: var(--primary);
+            background-color: var(--secondary);
+        }
+
+        /* bookmark */
+        /* :target{
+            background-color: aqua;
+            outline: 2px solid greenyellow;
+        } */
+
+        :target{
+            border: 1px solid orange;
+            background-color: gold;
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-style: italic;
+        }
+
+        input:valid{
+            outline: 4px solid green;
+        }
+        input:focus{
+            border-color: red;
+            outline: 2px solid yellow;
+        }
+
+        #p1:first-child{
+            color: rgb(96, 189, 107);
+        }
+
+        p::first-line
+        {
+            background-color: rgb(192, 192, 56);
+        }
+        p::first-letter{
+            color: red;
+            font-size: 50px;
+        }
+        p::after{
+            content: "hello";
+            /* content: url(../Gallery/my-family-album-l.jpg); */
+            content: url(../images/10000coders-logo-img.webp);
+        }
+
+
+        li::marker{
+            color: aqua;
+            font-size: 20px;
+            content: "learn";
+        }
+        li::selection{
+            background-color: burlywood;
+            color: blue;
+        }
+
+        .baba{
+            /* width: 50%; */
+            width: calc(100% - 0px);
+        }
+
+        .ovw{
+            overflow: scroll;
+            overflow-y: scroll;
+        }
+
+        img {
+  opacity: 0.5;
+}
+
+img:hover {
+  opacity: 1.0;
+}
+
+        img{
+            opacity: 0.4;
+        }
+    </style>
+</head>
+<body>
+    <!-- anchor tag pseudo-class -->
+    <a href="https://www.google.com">google</a>
+
+<!-- variable = act as a container -->
+<h1>hi rasagna</h1>
+
+
+    <!-- How to get bookmarks using anchor tag -->
+<a href="#div1" target="">1</a>
+<a href="#div2" target="">2</a>
+<a href="#div3" target="">3</a>
+<div id="div1" style="border: 2px solid red; width: 80px; height: 80px;">1</div>
+<div id="div2" style="border: 2px solid red; width: 80px; height: 80px;">2</div>
+<div id="div3" style="border: 2px solid red; width: 80px; height: 80px;">3</div> 
+
+<br>
+<br>
+
+<!-- tables -->
+
+<a href="#r1">1</a>
+<a href="#r2">2</a>
+<a href="#r3">3</a>
+<table>
+    <tr><td id="r1">row1</td></tr>
+    <tr><td id="r2">row2</td></tr>
+    <tr><td id="r3">row3</td></tr>
+</table>
+
+
+<form action="">
+    <input type="email">
+</form>
+
+<br>
+<br>
+    <div>
+        <p id="p1">para1</p>
+        <p id="p2">para2</p>
+        <p id="p3">para3</p>
+    </div>
+
+    
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum blanditiis sunt repellat magnam unde nobis eum aut, nihil libero eos! Pariatur obcaecati laboriosam dignissimos assumenda tenetur velit porro, tempore alias!</p>
+
+
+    <br>
+<div>
+    <p>{{para1}}</p>
+</div>
+
+<br>
+<ol>
+    <li>html</li>
+    <li>css</li>
+    <li>js</li>
+    <li>react</li>
+</ol>
+
+<br>
+<!-- z-index (- means to hide) -->
+    <img src="../images/cat-img.jpg" alt="">
+    <h2 style="position: absolute; bottom: -1000px; color: red; z-index: -11;">10k</h2>
+   
+    <!-- calc -->
+    <div style="width: 300px; background-color: gold;">
+        <img class="mail" src="../images/email-img.jpg" alt="" height="200px" width="190px">
+    </div>
+
+    <div class="ovw" style="height: 120px; width: 150px;">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At voluptate, culpa libero iure provident accusamus alias doloribus ullam atque asperiores vero quis ea quisquam consequuntur quibusdam, aut unde excepturi odio!</p>
+    </div>
+
+<!-- opacity -->
+    <img src="../images/spotify-img.png" alt="">
+</body>
+</html>

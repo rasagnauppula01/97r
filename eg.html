@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #two{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        #four{
+            display: none;
+        }
+        #two:hover+div{
+            display: block;
+        }
+        ul{
+            list-style-type: none;
+        }
+    </style>
+</head>
+<body>
+    <div style="background-color: azure;">
+        <div id="two">
+            <p id="three">Home</p>
+            <p>Administration</p>
+            <p>FAQ</p>
+        </div>
+        <div id="four" >
+            <ul style="margin-left: 51px;">
+                <li>link1</li>
+                <li>link1</li>
+                <li>link1</li>
+                <li>link1</li>
+                <li>link1</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
