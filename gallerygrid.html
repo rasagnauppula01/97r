@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grd{
+            border: 2px solid transparent;
+            padding: 10px;
+            background-color: black;
+            display: grid;
+            grid-template-columns: auto auto auto;
+            gap: 10px;
+            height: 670px;
+            width: 800px;
+            
+        }
+        .items{
+            background-color: lightblue;
+            border: 2px solid transparent;
+            padding: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        /* .item1{
+            grid-column-start: 1;
+            grid-column-end: 3;
+        } */
+        .item4{
+            grid-column-start: 2;
+            grid-column-end: 4;
+        }
+        .item3{
+            grid-row-start: 2;
+            grid-row-end: 5;
+        }
+        .item5{
+            grid-row-start: 2;
+            grid-row-end: 5;
+        }
+        .item10{
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+        .item1{
+            grid-area: 2 / 2 / span 3/ span 3;
+            background-color:lightpink ;
+        }
+        .item15{
+            grid-column: 4/span 3;
+        }
+        .item8{
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
+        .item9{
+            grid-row: 3/span 3;
+        }
+        .item14{
+            grid-column: 2/span 2;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-content: center;
+        }
+        .item1{
+            background-image: url(../cakegallery/RedVelvetCake2.webp);
+            background-size: 350px;
+        }
+        .item2{
+            background-image: url(../cakegallery/cake1.jpg);
+            background-size: 149px;
+        }
+        .item6{
+            background-image: url(../cakegallery/cake-3.webp);
+            background-size: 159px;
+        }
+        .item7{
+            background-image: url(../cakegallery/cake4.webp);
+            background-size: 150px;
+        }
+        .item8{
+            background-image: url(../cakegallery/Rainbow-cake-5.jpg);
+            background-size: 169px;
+        }
+        .item4{
+            background-image: url(../cakegallery/cake7.jpg);
+            background-size: 210px;
+        }
+        .item3{
+            background-image: url(../cakegallery/vanilla-bean-ice-cream-4.jpeg);
+            background-size: 253px;
+        }
+        .item5{
+            background-image: url(../cakegallery/Chocolate-Ice-Cream_1.jpg);
+            background-size: 217px;
+        }
+        .item9{
+            background-image: url(../cakegallery/ice-cream-Alberta-Rose-3.jpg);
+            background-size: 175px;
+        }
+        .item10{
+            background-image: url(../cakegallery/strawberryicecream.jpg);
+            background-size: 350px;
+        }
+        .item11{
+            background-image: url(../cakegallery/cake4.webp);
+            background-size: 150px;
+        }
+        .item12{
+            background-image: url(../cakegallery/cake1.jpg);
+            background-size: 149px;
+        }
+    </style>
+</head>
+<body>
+    <div class="items">GRID GALLERY</div>
+    <br>
+    <div class="grd">
+        <div class="items item1"></div>
+        <div class="items item2"></div>
+        <div class="items item3"></div>
+        <div class="items item4"></div>
+        <div class="items item5"></div>
+        <div class="items item6"></div>
+        <div class="items item7"></div>
+        <div class="items item8"></div>
+        <div class="items item9"></div>
+        <div class="items item10"></div>
+        <div class="items item11"></div>
+        <div class="items item12"></div>
+        <!-- <div class="items item13">13</div>
+        <div class="items item14">14</div>
+        <div class="items item15">15</div> -->
+    </div>
+</body>
+</html>

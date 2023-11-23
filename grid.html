@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        .pd{
+            background-color: rgb(175, 175, 121);
+            border: 1px solid orange;
+            width: 650px;
+            height: 700px;
+            /* padding: 150px; */
+        }
+        .main-grid{
+            border: 2px solid black;
+            background-color:lightblue;
+            padding: 50px;
+            margin: 50px;
+            height: 490px;
+            width: 400px;
+            border-radius: 5%;
+    
+        }
+        .grid-container{
+            border: 1px solid transparent;
+            background-color: aliceblue;
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            padding: 20px;
+            gap: 25px;
+        }
+        #so{
+            border: 2px solid gray;
+            background-color: gray;
+
+        }
+        .in{
+            display: grid;
+            grid-template-columns: auto auto;
+            background-color: aliceblue;
+            border: 1px solid black;
+            padding: 20px;
+            gap: 5px;
+            margin: 15px;
+            border-radius: 15%;
+        }
+        .item1, .item2, .item3, .item4,.item5,.item6,.item7,.item8, .item9, .item10,.item11,.item12,.item13,.item14,.item15,.item16,.item18,.item19{
+            border: 1px solid transparent;
+            border-radius: 35%;
+            background-color: rgb(112, 133, 141);
+            color: whitesmoke;
+            height: 50px;
+            width: 45px;
+            text-align: center;
+            box-shadow: 0px 0px 2px 2px black;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+        }
+        .item18{
+            grid-column-start: 1;
+            grid-column-end: 3;
+            width: 150px;
+            border-radius: 2%;
+            margin-top: -10px;
+            padding-bottom: 6px;
+        }
+        .item21{
+            grid-area: 4 / 4 / span 2;
+            border: 1px solid transparent;
+            border-radius: 35%;
+            background-color: rgb(112, 133, 141);
+            color: whitesmoke;
+            text-align: center;
+            border-radius: 1%;
+            padding-top: 25px;
+            box-shadow: 0px 0px 2px 2px black;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="pd">
+        <div class="main-grid">
+            <div id="so">
+                <div class="in">
+                    <div class="i1"></div>
+                    <div class="i2"></div>
+                    <div class="i1"></div>
+                    <div class="i2"></div>
+                </div>
+            </div>
+
+            <div class="grid-container">
+                <div class="item1"><h2>MC</h2></div>
+                <div class="item2"><h2>M+</h2></div>
+                <div class="item3"><h1>/</h1></div>
+                <div class="item4"><h1><i class='bx bx-x'></i></h1></div>
+                <div class="item5"><h2>7</h2></div>
+                <div class="item6"><h2>8</h2></div>
+                <div class="item7"><h2>9</h2></div>
+                <div class="item8"><h2><i class='bx bx-minus'></i></h2></div>
+                <div class="item9"><h2>4</h2></div>
+                <div class="item10"><h2>5</h2></div>
+                <div class="item11"><h2>6</h2></div>
+                <div class="item12"><h2><i class='bx bx-plus'></i></h2></div>
+                <div class="item13"><h2>1</h2></div>
+                <div class="item14"><h2>2</h2></div>
+                <div class="item15"><h2>3</h2></div>
+                <div class="item21"><h1>=</h1></div>
+                <div class="item18"><h1>0</h1></div>
+                <div class="item19"><h1>.</h1></div> 
+                </div>
+        </div>
+    </div>
+</body>
+</html>
