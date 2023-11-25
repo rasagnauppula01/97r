@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transforms</title>
+    <style>
+        .totalanimation{
+            border: 2px solid gray;
+            width: 990px;
+            height: 1479px;
+            background-color: aliceblue;
+        }
+        .mydiv{
+            border: 1px solid black;
+            margin-top: 20px;
+            margin-left: 10px;
+            background-color: black;
+            font-size: 20px;
+            display: inline-block;
+            margin: 10px;
+            width: 399px;
+            height: 50px;
+            /* opacity: 0.5; */
+        }
+        .mydiv:hover{
+            opacity: 0.5;
+        }
+        .maindiv{
+            position: absolute;
+            margin: 30px;
+            background-color: black;
+        }
+        .radio_btn1:active ~.text-area{
+            transform: rotate(10deg);
+        }
+        #t1{
+            color: pink;
+            background-color: black;
+            /* margin-left: 15px;
+            padding-bottom: 15px;
+            margin-top: -5px; */
+        }
+        #transform{
+            color: green;
+            background-color: black;
+            /* padding: 5px; */
+        }
+        .text-area{
+            display: none;
+            position: absolute;
+            left: 500px;
+            top: 2px;
+            padding: 10px;
+            border: 1px solid black;
+            cursor: pointer;
+            background-color: lightskyblue;
+   
+        }
+
+        /* .text-area{
+            background-color: lightskyblue;
+            display: none;
+            display: inline-block;
+            border: 1px solid transparent;
+            width: 70px;
+            height: 150px;
+            padding: 20px;
+            position: absolute;
+            cursor:pointer
+            
+        } */
+        body{
+            background-color: black;
+            display: flex;
+            justify-content: center;
+        }
+        /* input:checked{
+            transform: rotate(45deg);
+        }
+        .text-area{
+            transform: skew(20deg,20deg);
+        } */
+
+       .radio_btn1:checked ~ .text-area
+       {
+            display: block;
+            transform: none;
+       }
+       .radio_btn2:checked ~ .text-area
+       {
+            display: block;
+            transform: rotate(10deg);
+       }
+       .radio_btn3:checked ~ .text-area
+       {
+            display: block;
+            transform: rotate(45deg);
+       }
+       .radio_btn4:checked ~ .text-area
+       {
+            display: block;
+            transform: rotateX(45deg);
+       }
+       .radio_btn5:checked ~ .text-area
+       {
+            display: block;
+            transform: rotateX(100deg);
+       }
+       .radio_btn6:checked ~ .text-area
+       {
+            display: block;
+            transform: rotateY(45deg);
+       }
+       .radio_btn7:checked ~ .text-area
+       {
+            display: block;
+            transform: rotateY(80deg);
+       }
+       .radio_btn8:checked ~ .text-area
+       {
+            display: block;
+            transform: skew(20deg , 20deg);
+       }
+       .radio_btn9:checked ~ .text-area
+       {
+            display: block;
+            transform: skew(30deg , 30deg);
+       }
+       .radio_btn10:checked ~ .text-area
+       {
+            display: block;
+            transform: skewX(30deg);
+       }
+       .radio_btn11:checked ~ .text-area
+       {
+            display: block;
+            transform: skewX(40deg);
+       }
+       .radio_btn12:checked ~ .text-area
+       {
+            display: block;
+            transform: skewY(30deg);
+       }
+       .radio_btn13:checked ~ .text-area
+       {
+            display: block;
+            transform: skewY(40deg);
+       }
+       .radio_btn14:checked ~ .text-area
+       {
+            display: block;
+            transform: translate(20px, 10px);
+       }
+       .radio_btn15:checked ~ .text-area
+       {
+            display: block;
+            transform: translate(20px, 20px);
+       }
+       .radio_btn16:checked ~ .text-area
+       {
+            display: block;
+            transform: scale(2,2);
+       }
+       .radio_btn17:checked ~ .text-area
+       {
+            display: block;
+            transform: scale(2,3);
+       }
+       .radio_btn18:checked ~ .text-area
+       {
+            display: block;
+            transform: matrix(0.866, 0.7, -0.8, 0.866, 0,0);
+       }
+       .radio_btn19:checked ~ .text-area
+       {
+            display: block;
+            transform: matrix(0.586, 0.8, -0.8, 0.586, 0,0);
+       }
+       .radio_btn20:checked ~ .text-area
+       {
+            display: block;
+            transform: matrix(0.586 , 0.8 , -0.8, 0.586, 40, 30);
+       }
+       .animation-textholder{
+            border: 1px solid transparent;
+            display: flex;
+            position: absolute;
+            width: 390px;
+            margin-left: 499px;
+            margin-top: 39px;
+            height: 1410px;
+            background-color: rgb(203, 168, 168);
+            top: -40px;
+       }
+       .animationcontainer{
+        border: 2px solid transparent;
+        width: 990px;
+        height: 1460px;
+        margin: 0px;
+        /* background-color: rgb(210, 182, 182); */
+       }
+    </style>
+</head>
+<body>
+    <div class="totalanimation">
+        <div class="animationcontainer">
+            <div class="maindiv">
+                <input type="radio" class="radio_btn1" name="radio_b1" >
+                    <div style="display: inline; padding-left: 10px; opacity: 1;">
+                        <span id="t1">transform:</span>
+                        <span id="transform">none;</span></div>
+                    <div class="text-area">
+                        See what different transform values does with this blue DIV element.
+                    </div>
+                
+                <div class="mydiv1">
+                    <input type="radio" class="radio_btn2" name="radio_b1" >
+                    <div class="mydiv">
+                        <span id="t1">transform:</span>
+                        <span id="transform">rotate(10deg);</span>
+                    </div>
+                    <div class="text-area">
+                        See what different transform values does with this blue DIV element.
+                    </div> 
+                </div>
+                <div class="mydiv2">
+                    <input type="radio" class="radio_btn3" name="radio_b1" >
+                    <div class="mydiv">
+                        <span id="t1">transform:</span>
+                        <span id="transform">rotate(45deg);</span>
+                    </div>
+                    <div class="text-area">
+                        See what different transform values does with this blue DIV element.
+                    </div> 
+                </div>
+                <div class="mydiv3">
+                    <input type="radio" class="radio_btn4" name="radio_b1">
+                    <div class="mydiv">
+                        <span id="t1">transform:</span>
+                        <span id="transform">rotateX(45deg);</span>
+                    </div>
+                    <div class="text-area">
+                        See what different transform values does with this blue DIV element.
+                    </div> 
+                </div>
+                <div class="mydiv4">
+                    <input type="radio" class="radio_btn5" name="radio_b1">
+                    <div class="mydiv">
+                        <span id="t1">transform:</span>
+                        <span id="transform">rotateX(100deg);</span>
+                    </div>
+                    <div class="text-area">
+                        See what different transform values does with this blue DIV element.
+                    </div> 
+                </div>
+                <div class="mydiv5">
+                    <input type="radio" class="radio_btn6" name="radio_b1" >
+                    <div class="mydiv">
+                        <span id="t1">transform:</span>
+                        <span id="transform">rotateY(45deg);</span>
+                    </div>
+                    <div class="text-area">
+                        See what different transform values does with this blue DIV element.
+                    </div> 
+                </div>
+                <div class="mydiv6">
+                    <input type="radio" class="radio_btn7" name="radio_b1">
+                    <div class="mydiv">
+                        <span id="t1">transform:</span>
+                        <span id="transform">rotateY(80deg);</span>
+                    </div>
+                    <div class="text-area">
+                        See what different transform values does with this blue DIV element.
+                    </div> 
+                </div>
+                <div class="mydiv7">
+                    <input type="radio" class="radio_btn8" name="radio_b1">
+                    <div class="mydiv">
+                        <span id="t1">transform:</span>
+                        <span id="transform">skew(20deg, 20deg);</span>
+                    </div>
+                    <div class="text-area">
+                        See what different transform values does with this blue DIV element.
+                    </div> 
+                </div>
+                <div class="mydiv8">
+                    <input type="radio" class="radio_btn9" name="radio_b1" >
+                    <div class="mydiv">
+                        <span id="t1">transform:</span>
+                        <span id="transform">skewX(30deg, 30deg);</span>
+                    </div>
+                    <div class="text-area">
+                        See what different transform values does with this blue DIV element.
+                    </div> 
+                </div>
+                <div class="mydiv9">
+                    <input type="radio" class="radio_btn10" name="radio_b1" >
+                    <div class="mydiv">
+                        <span id="t1">transform:</span>
+                        <span id="transform">skewX(30deg);</span>
+                    </div>
+                    <div class="text-area">
+                        See what different transform values does with this blue DIV element.
+                    </div> 
+                </div>
+                <div class="mydiv10">
+                    <input type="radio" class="radio_btn11" name="radio_b1" >
+                    <div class="mydiv">
+                        <span id="t1">transform:</span>
+                        <span id="transform">skewX(40deg);</span>
+                    </div>
+                    <div class="text-area">
+                        See what different transform values does with this blue DIV element.
+                    </div> 
+                </div>
+                <div class="mydiv11">
+                    <input type="radio" class="radio_btn12" name="radio_b1" >
+                    <div class="mydiv">
+                        <span id="t1">transform:</span>
+                        <span id="transform">skewY(30deg);</span>
+                    </div>
+                    <div class="text-area">
+                        See what different transform values does with this blue DIV element.
+                    </div> 
+                </div>
+                <div class="mydiv12">
+                    <input type="radio" class="radio_btn13" name="radio_b1" >
+                    <div class="mydiv">
+                        <span id="t1">transform:</span>
+                        <span id="transform">skewY(40deg);</span>
+                    </div>
+                    <div class="text-area">
+                        See what different transform values does with this blue DIV element.
+                    </div> 
+                </div>
+                <div class="mydiv13">
+                    <input type="radio" class="radio_btn14" name="radio_b1" >
+                    <div class="mydiv">
+                        <span id="t1">transform:</span>
+                        <span id="transform">translate( 20px , 10px);</span>
+                    </div>
+                    <div class="text-area">
+                        See what different transform values does with this blue DIV element.
+                    </div> 
+                </div>
+                <div class="mydiv14">
+                    <input type="radio" class="radio_btn15" name="radio_b1" >
+                    <div class="mydiv">
+                        <span id="t1">transform:</span>
+                        <span id="transform">translate( 20px , 20px);</span>
+                    </div>
+                    <div class="text-area">
+                        See what different transform values does with this blue DIV element.
+                    </div> 
+                </div>
+                <div class="mydiv15">
+                    <input type="radio" class="radio_btn16" name="radio_b1" >
+                    <div class="mydiv">
+                        <span id="t1">transform:</span>
+                        <span id="transform">sclae( 2 , 2);</span>
+                    </div>
+                    <div class="text-area">
+                        See what different transform values does with this blue DIV element.
+                    </div> 
+                </div>
+                <div class="mydiv16">
+                    <input type="radio" class="radio_btn17" name="radio_b1" >
+                    <div class="mydiv">
+                        <span id="t1">transform:</span>
+                        <span id="transform">sclae( 2 , 3);</span>
+                    </div>
+                    <div class="text-area">
+                        See what different transform values does with this blue DIV element.
+                    </div> 
+                </div>
+                <div class="mydiv17">
+                    <input type="radio" class="radio_btn18" name="radio_b1" >
+                    <div class="mydiv">
+                        <span id="t1">transform:</span>
+                        <span id="transform">
+                         <br>   matrix(0.866,0.7,-0.8,0.866,0,0);</span>
+                    </div>
+                    <div class="text-area">
+                        See what different transform values does with this blue DIV element.
+                    </div> 
+                </div>
+                <div class="mydiv18">
+                    <input type="radio" class="radio_btn19" name="radio_b1">
+                    <div class="mydiv">
+                        <span id="t1">transform:</span>
+                        <span id="transform">
+                            <br>   matrix(0.586 , 0.8 , -0.8, 0.586 , 0, 0);</span>
+                    </div>
+                    <div class="text-area">
+                        See what different transform values does with this blue DIV element.
+                    </div> 
+                </div>
+                <div class="mydiv19">
+                    <input type="radio" class="radio_btn20" name="radio_b1" >
+                    <div class="mydiv">
+                        <span id="t1">transform:</span>
+                        <span id="transform">
+                            <br>   matrix(0.586 , 0.8 , -0.8, 0.586, 40, 30);</span>
+                    </div>
+                    <div class="text-area">
+                        See what different transform values does with this blue DIV element.
+                    </div> 
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="animation-textholder">
+            <div class="text-area">
+                See what different transform values does with this blue DIV element.
+            </div>
+        </div> -->
+    </div>
+</body>
+</html>
