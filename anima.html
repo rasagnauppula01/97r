@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 90vh;
+            background: url(../spacegallery/backgroundurl.webp);
+            background-size: cover;
+        }
+        .box{
+            position:relative;
+            width: 200px;
+            height: 300px;
+            transform-style: preserve-3d;
+            animation: alternate 20s liner infinite;
+        }
+        @keyframes animate {
+            0%{
+                transform: translateX(1000px) rotate(0deg);
+                
+            }
+            100%{
+                transform: translateZ(1000px) rotate(360deg);
+            } 
+             
+        }
+        .box span{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform-origin: center;
+            transform: rotateY(calc(var(--i)* 45deg)) translateZ(400px);
+            -webkit-box-reflect: below 5px linear-gradient(transparent,transparent, #0084);
+        }
+        .box span img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .box{
+            position: relative;
+            display: inline-block;
+            animation-name: animate;
+            animation-duration: 6s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+            animation-delay: 1s;
+            animation-direction: forward;
+            animation-play-state: running;
+            margin-left: -920px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <span style="--i:1"><img src="../spacegallery/RakeshSharma-1st-indian-goto-space.webp" alt=""></span>
+        <span style="--i:8"><img src="../spacegallery/Kalpana_Chawla,_NASA_photo_portrait_in_orange_suit.jpg" alt=""></span>
+        <span style="--i:5"><img src="../spacegallery/sunita-williams.webp" alt=""></span>   
+    </div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* @keyframes catimg {
+            from{margin-left: 20px;}
+            to{margin-left: 150px;}
+        }
+        .an{
+            animation-name: catimg;
+            animation-duration: 8s;
+        } */
+
+        body{
+            padding: 50px;
+        }
+
+        .box{
+            width: 900px;
+            height: 900px;
+            position: relative;
+            display: inline-block;
+            background-image: url(../cakegallery/rabbit&tortoise-story.jpg);
+            background-size: cover;
+            animation-name: myframes;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+            animation-delay: 0s;
+            animation-direction: forward;
+            animation-play-state: running;
+
+        }
+        
+        @keyframes myframes{
+            from{
+                height: 200px;
+
+            }
+
+            to{
+                height: 500px;
+                background-color: pink;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- <div>
+        <img class="an" src="../images/cat-img.jpg" alt="" height="90px">
+    </div> -->
+    <div class="box1">
+        <img src="../spacegallery/turtle-rabbit-ran-over-turtle-vector-design.webp" alt="">
+    </div>
+    <div class="box">
+        
+    </div>
+</body>
+</html>

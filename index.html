@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            border: 2px solid black;
+            background-image: url(../cakegallery/road-img.jpg);
+            background-repeat:;
+            background-size: cover;
+            width: 1700px;
+            height: 1000px;
+        }
+        .sub{
+            position: relative;
+            top: 700px;
+            margin-left: 900px;
+        }
+        .sub1{
+            position: relative;
+            top: 490px;
+            border-radius: 50%;
+            margin-left: 999px;
+        }
+        @keyframes identifier {
+            from{margin-top: 20px;}
+            to{margin-top: 200px;}
+        }
+        .sub{
+            animation-name: identifier;
+            animation-duration:5s;
+        }
+        .sub1{
+            animation-name: identifier;
+            animation-duration: 0s;
+        }
+        .rabbit{
+            /* transition: all 1s; */
+            /* transition: all 1s; */
+            transition-delay: 1s;
+            transition-duration: 5s;
+        }
+        .turtle{
+            /* transition: all 1s; */
+            transition-delay: 5s;
+            transition-duration: 5s;
+            /* transition-delay: 5s;
+            position: relative;
+            margin-left: 990px;
+            top:390px */
+        }
+        
+       
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <!-- <img src="../cakegallery/road-img.jpg" alt="" width="1500px" height="1490px"> -->
+        <div class="sub">
+            <img class="rabbit" src="../spacegallery/gif.gif" width="120px" height="90px">
+            <!-- <img class="turtle" src="../cakegallery/cute-turtle-img.webp" alt="turtle" width="90px" height="90px"> -->
+        </div>
+        <div class="sub1">
+            <a href="./index1.html" target="_blank"><img class="turtle" src="../spacegallery/happy-turtle-cartoon-removebg-preview.png" alt="turtle" width="120px" height="90px"></a>
+        </div>
+    </div>
+</body>
+</html>
